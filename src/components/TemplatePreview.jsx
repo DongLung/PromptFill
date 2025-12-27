@@ -460,14 +460,14 @@ export const TemplatePreview = React.memo(({
                                     <button 
                                         onClick={(e) => { e.stopPropagation(); setImageUpdateMode('replace'); fileInputRef.current?.click(); }}
                                         className={`p-2.5 rounded-full transition-all shadow-lg ${isDarkMode ? 'bg-black/60 text-gray-300 hover:bg-black hover:text-orange-400' : 'bg-white/90 text-gray-700 hover:bg-white hover:text-orange-600'}`}
-                                        title="更换当前图片(本地)"
+                                        title={t('change_image_local')}
                                     >
                                         <Upload size={18} />
                                     </button>
                                     <button 
                                         onClick={(e) => { e.stopPropagation(); setImageUpdateMode('replace'); setShowImageUrlInput(true); }}
                                         className={`p-2.5 rounded-full transition-all shadow-lg ${isDarkMode ? 'bg-black/60 text-gray-300 hover:bg-black hover:text-orange-400' : 'bg-white/90 text-gray-700 hover:bg-white hover:text-orange-600'}`}
-                                        title="更换当前图片(URL)"
+                                        title={t('change_image_url')}
                                     >
                                         <Globe size={18} />
                                     </button>

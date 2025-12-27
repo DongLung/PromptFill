@@ -26,7 +26,7 @@ export const EditorToolbar = ({
           <PremiumButton 
             onClick={onUndo} 
             disabled={!canUndo} 
-            title={t('undo') || "撤消"} 
+            title={t('undo')} 
             icon={Undo} 
             color={isDarkMode ? "slate" : "slate"} 
             isDarkMode={isDarkMode}
@@ -35,7 +35,7 @@ export const EditorToolbar = ({
           <PremiumButton 
             onClick={onRedo} 
             disabled={!canRedo} 
-            title={t('redo') || "重做"} 
+            title={t('redo')} 
             icon={Redo} 
             color={isDarkMode ? "slate" : "slate"} 
             isDarkMode={isDarkMode}
@@ -49,7 +49,7 @@ export const EditorToolbar = ({
         {/* Grouping Buttons */}
         <div className="flex items-center gap-1.5">
           <span className={`text-xs font-medium ${isDarkMode ? 'text-gray-500' : 'text-gray-500'}`}>
-            联动组:
+            {t('linkage_group')}:
           </span>
           {[1, 2, 3, 4, 5].map(num => (
             <button
@@ -68,7 +68,7 @@ export const EditorToolbar = ({
                     : 'bg-gray-100 text-gray-600 hover:bg-gray-200 hover:text-gray-800')
                 }
               `}
-              title={cursorInVariable ? `设置为联动组 ${num}` : '请将光标置于变量内'}
+              title={cursorInVariable ? `${t('set_linkage_group')} ${num}` : t('cursor_in_variable_required')}
             >
               {num}
             </button>
@@ -86,10 +86,10 @@ export const EditorToolbar = ({
                   : 'bg-red-50 text-red-600 hover:bg-red-100 ring-1 ring-red-200'
                 }
               `}
-              title="解除联动"
+              title={t('unlink')}
             >
               <Unlink size={12} />
-              解除
+              {t('unlink_group')}
             </button>
           )}
         </div>

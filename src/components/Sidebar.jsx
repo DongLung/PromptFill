@@ -105,7 +105,7 @@ export const Sidebar = ({
           <button 
             onClick={onHome}
             className="p-2 group"
-            title="主页"
+            title={t('home')}
           >
             <div 
               style={{ '--mask-url': 'url(/home.svg)', ...getIconStyle() }}
@@ -116,7 +116,7 @@ export const Sidebar = ({
           <button 
             onClick={onDetail}
             className="p-2 group"
-            title="详情页"
+            title={t('details')}
           >
             <div 
               style={{ '--mask-url': 'url(/list.svg)', ...getIconStyle() }}
@@ -190,7 +190,7 @@ export const Sidebar = ({
         <button 
           onClick={() => setIsDarkMode(!isDarkMode)}
           className="p-2 group"
-          title={isDarkMode ? 'Light Mode' : 'Dark Mode'}
+          title={isDarkMode ? t('light_mode') : t('dark_mode')}
         >
           <div className={`${isDarkMode ? 'text-gray-400' : 'text-gray-400'} group-hover:text-[#F97316] transition-colors`}>
             {isDarkMode ? <Sun size={24} /> : <Moon size={24} />}

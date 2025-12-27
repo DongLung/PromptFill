@@ -3,10 +3,10 @@ import { Home, List, Edit3, Database, Sun, Moon } from 'lucide-react';
 
 const MobileTabBar = ({ activeTab, onTabChange, t, isDarkMode, onToggleDarkMode }) => {
   const tabs = [
-    { id: 'home', icon: Home, label: t('home') || '主页' },
-    { id: 'templates', icon: List, label: t('templates') || '模版列表' },
-    { id: 'editor', icon: Edit3, label: t('editor') || '模版编辑' },
-    { id: 'banks', icon: Database, label: t('banks') || '词库' },
+    { id: 'home', icon: Home, label: t('home') },
+    { id: 'templates', icon: List, label: t('templates') },
+    { id: 'editor', icon: Edit3, label: t('editor') },
+    { id: 'banks', icon: Database, label: t('banks') },
   ];
 
   return (

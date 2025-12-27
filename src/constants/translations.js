@@ -1,6 +1,30 @@
 // 翻译配置 (Translations)
 export const TRANSLATIONS = {
   cn: {
+    // 导航和标签页
+    home: "主页",
+    templates: "模版列表",
+    editor: "模版编辑",
+    banks: "词库",
+    details: "详情页",
+    
+    // 通用操作
+    undo: "撤消",
+    redo: "重做",
+    
+    // 联动组相关
+    linkage_group: "联动组",
+    set_linkage_group: "设置为联动组",
+    cursor_in_variable_required: "请将光标置于变量内",
+    unlink: "解除联动",
+    unlink_group: "解除",
+    change_image_url: "更换当前图片(URL)",
+    change_image_local: "更换当前图片(本地)",
+    
+    // 主题模式
+    light_mode: "浅色模式",
+    dark_mode: "深色模式",
+    
     template_management: "模版管理",
     template_details: "模版详情",
     template_subtitle: "切换或管理不同 Prompt",
@@ -126,6 +150,30 @@ export const TRANSLATIONS = {
     connect_author: "联系与关于",
   },
   en: {
+    // Navigation and Tabs
+    home: "Home",
+    templates: "Templates",
+    editor: "Editor",
+    banks: "Banks",
+    details: "Details",
+    
+    // Common Actions
+    undo: "Undo",
+    redo: "Redo",
+    
+    // Linkage Group Related
+    linkage_group: "Linkage Group",
+    set_linkage_group: "Set as linkage group",
+    cursor_in_variable_required: "Place cursor in variable",
+    unlink: "Unlink",
+    unlink_group: "Unlink",
+    change_image_url: "Change image (URL)",
+    change_image_local: "Change image (Local)",
+    
+    // Theme Mode
+    light_mode: "Light Mode",
+    dark_mode: "Dark Mode",
+    
     template_management: "Templates",
     template_details: "Details",
     template_subtitle: "Manage your Prompts",
