@@ -272,14 +272,16 @@ t('welcome_message', { name: userName })
 
 ### 定期检查 (Regular Checks)
 
-1. 搜索代码中的硬编码文本：
+1. 搜索代码中的硬编码文本（检查是否有中文字符）：
 ```bash
+# 在组件目录中搜索所有包含中文字符的文件
 grep -r "[\u4e00-\u9fa5]" src/components/
 ```
 
 2. 确保所有语言都有对应翻译：
 ```bash
 # 检查翻译键数量是否一致
+# 可以手动对比 translations.js 中 cn 和 en 对象的键数量
 ```
 
 3. 测试语言切换功能是否正常
