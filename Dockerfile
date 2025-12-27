@@ -6,7 +6,9 @@ WORKDIR /app
 # Copy package files first for better layer caching
 COPY package*.json ./
 
-# Install dependencies with SSL strict mode disabled for build environment
+# Install dependencies
+# Note: strict-ssl is disabled for sandboxed build environments
+# In production, remove this line or configure proper SSL certificates
 RUN npm config set strict-ssl false && \
     npm ci && \
     npm cache clean --force
@@ -22,7 +24,9 @@ FROM registry.access.redhat.com/ubi9/nodejs-20-minimal:latest
 
 WORKDIR /app
 
-# Install serve globally for serving static files with SSL strict mode disabled
+# Install serve globally for serving static files
+# Note: strict-ssl is disabled for sandboxed build environments
+# In production, remove this line or configure proper SSL certificates
 RUN npm config set strict-ssl false && \
     npm install -g serve && \
     npm cache clean --force
