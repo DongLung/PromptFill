@@ -103,6 +103,27 @@ Prompt Fill 现已迭代至 **v0.6.1** 版本。本项目初衷是解决 AI 绘�
 *   **macOS**: `start.command`
 *   **Windows**: `start.bat`
 
+### Docker 部署
+如果您希望使用 Docker 容器化部署，可以使用以下命令：
+
+1.  **构建镜像**
+    ```bash
+    docker build -t promptfill .
+    ```
+
+2.  **运行容器**
+    ```bash
+    docker run -d -p 3000:3000 promptfill
+    ```
+    
+    容器启动后，访问 `http://localhost:3000` 即可使用应用。
+
+**镜像特性**：
+*   基于 Red Hat UBI 9 minimal + Node.js 20，安全稳定
+*   多阶段构建，镜像大小仅约 224MB
+*   使用非 root 用户运行，安全性更高
+*   生产环境推荐使用
+
 ## 📖 使用指南
 
 ### 第一步：管理分类 (Categories)
